@@ -1,0 +1,3 @@
+将financial_management.sql配置到本地数据库，修改连接
+
+运行main.py
