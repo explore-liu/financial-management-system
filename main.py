@@ -6,7 +6,7 @@ from instructions import Instructions
 
 if __name__ == '__main__':
     try:
-        db = pymysql.connect(host="localhost", user="root", password="hujiaer2216", database="financial_management")
+        db = pymysql.connect(host="rm-bp134czkc4vi5a9517o.mysql.rds.aliyuncs.com", user="ad", password="@tao123456", database="financial_system")
     except:
         print('连接数据库失败\n')
         exit(0)

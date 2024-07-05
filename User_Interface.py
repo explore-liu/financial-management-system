@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_UserWindow(object):
     def setupUi(self, UserWindow):
         UserWindow.setObjectName("UserWindow")
-        UserWindow.resize(1020, 695)
+        UserWindow.resize(1020, 701)
         self.centralwidget = QtWidgets.QWidget(UserWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.frame = QtWidgets.QFrame(self.centralwidget)
@@ -113,6 +113,7 @@ class Ui_UserWindow(object):
         sizePolicy.setVerticalStretch(10)
         sizePolicy.setHeightForWidth(self.frame_3.sizePolicy().hasHeightForWidth())
         self.frame_3.setSizePolicy(sizePolicy)
+        self.frame_3.setStyleSheet("")
         self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_3.setObjectName("frame_3")
@@ -126,9 +127,10 @@ class Ui_UserWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frame_7.sizePolicy().hasHeightForWidth())
         self.frame_7.setSizePolicy(sizePolicy)
-        self.frame_7.setStyleSheet("background-color: rgb(0, 85, 255);\n"
-";\n"
-"border-bottom-left-radius:30px\n"
+        self.frame_7.setStyleSheet("background-color: rgb(140,140, 140);\n"
+"\n"
+"border-bottom-left-radius:30px;\n"
+"\n"
 "\n"
 "    ")
         self.frame_7.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -170,6 +172,17 @@ class Ui_UserWindow(object):
 "")
         self.pushButton_My.setObjectName("pushButton_My")
         self.verticalLayout_2.addWidget(self.pushButton_My)
+        self.pushButton_Table = QtWidgets.QPushButton(self.frame_7)
+        self.pushButton_Table.setStyleSheet("font: 18pt \"Algerian\";\n"
+"color: rgb(255, 255, 255);\n"
+"pressed{\n"
+"    padding-left:5px;\n"
+"    padding-top:5px;\n"
+"}\n"
+"\n"
+"")
+        self.pushButton_Table.setObjectName("pushButton_Table")
+        self.verticalLayout_2.addWidget(self.pushButton_Table)
         self.horizontalLayout_4.addWidget(self.frame_7)
         self.frame_8 = QtWidgets.QFrame(self.frame_3)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
@@ -191,10 +204,9 @@ class Ui_UserWindow(object):
         self.page_my.setObjectName("page_my")
         self.label_7 = QtWidgets.QLabel(self.page_my)
         self.label_7.setGeometry(QtCore.QRect(0, 0, 111, 41))
-        self.label_7.setStyleSheet("\n"
-"font: 15pt \"Algerian\";\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(0, 85, 255);")
+        self.label_7.setStyleSheet("font: 16pt \"Algerian\";\n"
+"color: rgb(116, 27, 124);\n"
+"background-color: rgb(255, 255, 255);")
         self.label_7.setObjectName("label_7")
         self.label_13 = QtWidgets.QLabel(self.page_my)
         self.label_13.setGeometry(QtCore.QRect(100, 170, 71, 31))
@@ -256,11 +268,11 @@ class Ui_UserWindow(object):
         self.page_salary = QtWidgets.QWidget()
         self.page_salary.setObjectName("page_salary")
         self.label_6 = QtWidgets.QLabel(self.page_salary)
-        self.label_6.setGeometry(QtCore.QRect(0, 0, 161, 41))
+        self.label_6.setGeometry(QtCore.QRect(0, 0, 171, 41))
         self.label_6.setStyleSheet("\n"
-"font: 15pt \"Algerian\";\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(0, 85, 255);")
+"font: 16pt \"Algerian\";\n"
+"color: rgb(116, 27, 124);\n"
+"background-color: rgb(255, 255, 255);")
         self.label_6.setObjectName("label_6")
         self.label_4 = QtWidgets.QLabel(self.page_salary)
         self.label_4.setGeometry(QtCore.QRect(81, 120, 161, 41))
@@ -304,9 +316,9 @@ class Ui_UserWindow(object):
         self.label_8 = QtWidgets.QLabel(self.page_edit)
         self.label_8.setGeometry(QtCore.QRect(0, 0, 111, 41))
         self.label_8.setStyleSheet("\n"
-"font: 15pt \"Algerian\";\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(0, 85, 255);")
+"font: 16pt \"Algerian\";\n"
+"color: rgb(116, 27, 124);\n"
+"background-color: rgb(255, 255, 255);")
         self.label_8.setObjectName("label_8")
         self.frame_9 = QtWidgets.QFrame(self.page_edit)
         self.frame_9.setGeometry(QtCore.QRect(0, 479, 641, 40))
@@ -351,6 +363,62 @@ class Ui_UserWindow(object):
         self.pushButton_change_sure.setGeometry(QtCore.QRect(230, 280, 93, 28))
         self.pushButton_change_sure.setObjectName("pushButton_change_sure")
         self.stackedWidget.addWidget(self.page_edit)
+        self.page_table = QtWidgets.QWidget()
+        self.page_table.setObjectName("page_table")
+        self.lineEdit_file = QtWidgets.QLineEdit(self.page_table)
+        self.lineEdit_file.setGeometry(QtCore.QRect(190, 150, 231, 21))
+        self.lineEdit_file.setText("")
+        self.lineEdit_file.setObjectName("lineEdit_file")
+        self.label_3 = QtWidgets.QLabel(self.page_table)
+        self.label_3.setGeometry(QtCore.QRect(240, 110, 141, 20))
+        self.label_3.setStyleSheet("\n"
+"font: 12pt \"Algerian\";")
+        self.label_3.setObjectName("label_3")
+        self.pushButton_4 = QtWidgets.QPushButton(self.page_table)
+        self.pushButton_4.setGeometry(QtCore.QRect(260, 270, 93, 28))
+        self.pushButton_4.setObjectName("pushButton_4")
+        self.frame_10 = QtWidgets.QFrame(self.page_table)
+        self.frame_10.setGeometry(QtCore.QRect(0, 479, 641, 61))
+        self.frame_10.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_10.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_10.setObjectName("frame_10")
+        self.stackedWidget_3 = QtWidgets.QStackedWidget(self.frame_10)
+        self.stackedWidget_3.setGeometry(QtCore.QRect(0, 0, 641, 51))
+        self.stackedWidget_3.setObjectName("stackedWidget_3")
+        self.page_3 = QtWidgets.QWidget()
+        self.page_3.setObjectName("page_3")
+        self.stackedWidget_3.addWidget(self.page_3)
+        self.page_5 = QtWidgets.QWidget()
+        self.page_5.setObjectName("page_5")
+        self.label_5 = QtWidgets.QLabel(self.page_5)
+        self.label_5.setGeometry(QtCore.QRect(230, 20, 141, 21))
+        self.label_5.setStyleSheet("color: rgb(255, 0, 0);\n"
+"font: 12pt \"Algerian\";")
+        self.label_5.setObjectName("label_5")
+        self.stackedWidget_3.addWidget(self.page_5)
+        self.page_6 = QtWidgets.QWidget()
+        self.page_6.setObjectName("page_6")
+        self.label_9 = QtWidgets.QLabel(self.page_6)
+        self.label_9.setGeometry(QtCore.QRect(280, 20, 91, 21))
+        self.label_9.setStyleSheet("color: rgb(255, 0, 0);\n"
+"font: 12pt \"Algerian\";")
+        self.label_9.setObjectName("label_9")
+        self.stackedWidget_3.addWidget(self.page_6)
+        self.page_7 = QtWidgets.QWidget()
+        self.page_7.setObjectName("page_7")
+        self.label_28 = QtWidgets.QLabel(self.page_7)
+        self.label_28.setGeometry(QtCore.QRect(270, 20, 91, 21))
+        self.label_28.setStyleSheet("color: rgb(255, 0, 0);\n"
+"font: 12pt \"Algerian\";")
+        self.label_28.setObjectName("label_28")
+        self.stackedWidget_3.addWidget(self.page_7)
+        self.label_29 = QtWidgets.QLabel(self.page_table)
+        self.label_29.setGeometry(QtCore.QRect(0, 0, 121, 41))
+        self.label_29.setStyleSheet("font: 16pt \"Algerian\";\n"
+"color: rgb(116, 27, 124);\n"
+"background-color: rgb(255, 255, 255);")
+        self.label_29.setObjectName("label_29")
+        self.stackedWidget.addWidget(self.page_table)
         self.horizontalLayout_5.addWidget(self.stackedWidget)
         self.horizontalLayout_4.addWidget(self.frame_8)
         self.verticalLayout.addWidget(self.frame_3)
@@ -359,6 +427,7 @@ class Ui_UserWindow(object):
         self.retranslateUi(UserWindow)
         self.stackedWidget.setCurrentIndex(1)
         self.stackedWidget_2.setCurrentIndex(0)
+        self.stackedWidget_3.setCurrentIndex(0)
         self.pushButton_2.clicked.connect(UserWindow.close) # type: ignore
         self.pushButton.clicked.connect(UserWindow.hide) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(UserWindow)
@@ -370,6 +439,7 @@ class Ui_UserWindow(object):
         self.pushButton_Seach.setText(_translate("UserWindow", "薪水查询"))
         self.pushButton_Edit.setText(_translate("UserWindow", "密码修改"))
         self.pushButton_My.setText(_translate("UserWindow", "我的"))
+        self.pushButton_Table.setText(_translate("UserWindow", "提交报表"))
         self.label_7.setText(_translate("UserWindow", "个人信息"))
         self.label_13.setText(_translate("UserWindow", "姓名"))
         self.label_14.setText(_translate("UserWindow", "TextLabel"))
@@ -398,4 +468,11 @@ class Ui_UserWindow(object):
         self.lineEdit_change_password.setPlaceholderText(_translate("UserWindow", "输入新密码："))
         self.lineEdit_Rchange_password.setPlaceholderText(_translate("UserWindow", "确认密码："))
         self.pushButton_change_sure.setText(_translate("UserWindow", "确认"))
+        self.lineEdit_file.setPlaceholderText(_translate("UserWindow", "请输入文件名:"))
+        self.label_3.setText(_translate("UserWindow", "请输入文件名："))
+        self.pushButton_4.setText(_translate("UserWindow", "确定"))
+        self.label_5.setText(_translate("UserWindow", "文件名不存在！"))
+        self.label_9.setText(_translate("UserWindow", "表为空！"))
+        self.label_28.setText(_translate("UserWindow", "提交成功！"))
+        self.label_29.setText(_translate("UserWindow", "提交报表"))
 import res_rc

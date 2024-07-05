@@ -33,3 +33,17 @@ class Financial(Instructions):
         # info = '更改完毕。'
         self.execute(sql)
         return 1
+
+    # 查看报表
+    def view_statement(self):
+        sql = 'select * from statement'
+        result = self.query(sql)
+        for i in range(len(result)):
+            result[i][2] = str(result[i][2])
+            result[i][3] = str(result[i][3])
+        return result
+
+    # 审批报表
+    def delete_statement(self, st_no):
+        delete_sql = 'delete from statement where %s=\'%s\'' % ('st_no', st_no)
+        self.execute(delete_sql)

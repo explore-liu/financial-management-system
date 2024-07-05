@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_FinanceWindow(object):
     def setupUi(self, FinanceWindow):
         FinanceWindow.setObjectName("FinanceWindow")
-        FinanceWindow.resize(1020, 695)
+        FinanceWindow.resize(1020, 707)
         self.centralwidget = QtWidgets.QWidget(FinanceWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.frame = QtWidgets.QFrame(self.centralwidget)
@@ -126,11 +126,9 @@ class Ui_FinanceWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frame_7.sizePolicy().hasHeightForWidth())
         self.frame_7.setSizePolicy(sizePolicy)
-        self.frame_7.setStyleSheet("background-color: rgb(0, 85, 255);\n"
-";\n"
-"border-bottom-left-radius:30px\n"
+        self.frame_7.setStyleSheet("background-color: rgb(140,140, 140);\n"
 "\n"
-"    ")
+"border-bottom-left-radius:30px;")
         self.frame_7.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_7.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_7.setObjectName("frame_7")
@@ -192,6 +190,16 @@ class Ui_FinanceWindow(object):
 "")
         self.pushButton_Change.setObjectName("pushButton_Change")
         self.verticalLayout_2.addWidget(self.pushButton_Change)
+        self.pushButton_Check = QtWidgets.QPushButton(self.frame_7)
+        self.pushButton_Check.setStyleSheet("font: 18pt \"Algerian\";\n"
+"color: rgb(255, 255, 255);\n"
+"pressed{\n"
+"    padding-left:5px;\n"
+"    padding-top:5px;\n"
+"}\n"
+"")
+        self.pushButton_Check.setObjectName("pushButton_Check")
+        self.verticalLayout_2.addWidget(self.pushButton_Check)
         self.horizontalLayout_4.addWidget(self.frame_7)
         self.frame_8 = QtWidgets.QFrame(self.frame_3)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
@@ -213,10 +221,9 @@ class Ui_FinanceWindow(object):
         self.page_my.setObjectName("page_my")
         self.label_7 = QtWidgets.QLabel(self.page_my)
         self.label_7.setGeometry(QtCore.QRect(0, 0, 111, 41))
-        self.label_7.setStyleSheet("\n"
-"font: 15pt \"Algerian\";\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(0, 85, 255);")
+        self.label_7.setStyleSheet("font: 16pt \"Algerian\";\n"
+"color: rgb(116, 27, 124);\n"
+"background-color: rgb(255, 255, 255);")
         self.label_7.setObjectName("label_7")
         self.label_13 = QtWidgets.QLabel(self.page_my)
         self.label_13.setGeometry(QtCore.QRect(100, 170, 71, 31))
@@ -279,10 +286,9 @@ class Ui_FinanceWindow(object):
         self.page_salary.setObjectName("page_salary")
         self.label_6 = QtWidgets.QLabel(self.page_salary)
         self.label_6.setGeometry(QtCore.QRect(0, 0, 161, 41))
-        self.label_6.setStyleSheet("\n"
-"font: 15pt \"Algerian\";\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(0, 85, 255);")
+        self.label_6.setStyleSheet("font: 16pt \"Algerian\";\n"
+"color: rgb(116, 27, 124);\n"
+"background-color: rgb(255, 255, 255);")
         self.label_6.setObjectName("label_6")
         self.label_4 = QtWidgets.QLabel(self.page_salary)
         self.label_4.setGeometry(QtCore.QRect(81, 120, 161, 41))
@@ -325,10 +331,9 @@ class Ui_FinanceWindow(object):
         self.page_edit.setObjectName("page_edit")
         self.label_8 = QtWidgets.QLabel(self.page_edit)
         self.label_8.setGeometry(QtCore.QRect(0, 0, 111, 41))
-        self.label_8.setStyleSheet("\n"
-"font: 15pt \"Algerian\";\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(0, 85, 255);")
+        self.label_8.setStyleSheet("font: 16pt \"Algerian\";\n"
+"color: rgb(116, 27, 124);\n"
+"background-color: rgb(255, 255, 255);")
         self.label_8.setObjectName("label_8")
         self.frame_9 = QtWidgets.QFrame(self.page_edit)
         self.frame_9.setGeometry(QtCore.QRect(0, 479, 641, 40))
@@ -384,20 +389,18 @@ class Ui_FinanceWindow(object):
         self.tableWidget.setRowCount(0)
         self.label_52 = QtWidgets.QLabel(self.page_find_other)
         self.label_52.setGeometry(QtCore.QRect(0, 0, 161, 41))
-        self.label_52.setStyleSheet("\n"
-"font: 15pt \"Algerian\";\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(0, 85, 255);")
+        self.label_52.setStyleSheet("font: 16pt \"Algerian\";\n"
+"color: rgb(116, 27, 124);\n"
+"background-color: rgb(255, 255, 255);")
         self.label_52.setObjectName("label_52")
         self.stackedWidget.addWidget(self.page_find_other)
         self.page_chang_eother = QtWidgets.QWidget()
         self.page_chang_eother.setObjectName("page_chang_eother")
         self.label_53 = QtWidgets.QLabel(self.page_chang_eother)
         self.label_53.setGeometry(QtCore.QRect(0, 0, 111, 41))
-        self.label_53.setStyleSheet("\n"
-"font: 15pt \"Algerian\";\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(0, 85, 255);")
+        self.label_53.setStyleSheet("font: 16pt \"Algerian\";\n"
+"color: rgb(116, 27, 124);\n"
+"background-color: rgb(255, 255, 255);")
         self.label_53.setObjectName("label_53")
         self.lineEdit_grade = QtWidgets.QLineEdit(self.page_chang_eother)
         self.lineEdit_grade.setGeometry(QtCore.QRect(220, 240, 201, 31))
@@ -436,6 +439,26 @@ class Ui_FinanceWindow(object):
         self.label_54.setObjectName("label_54")
         self.stackedWidget_3.addWidget(self.page_10)
         self.stackedWidget.addWidget(self.page_chang_eother)
+        self.page_cleck = QtWidgets.QWidget()
+        self.page_cleck.setObjectName("page_cleck")
+        self.tableWidget_2 = QtWidgets.QTableWidget(self.page_cleck)
+        self.tableWidget_2.setGeometry(QtCore.QRect(130, 60, 371, 241))
+        self.tableWidget_2.setObjectName("tableWidget_2")
+        self.tableWidget_2.setColumnCount(0)
+        self.tableWidget_2.setRowCount(0)
+        self.lineEdit_num_2 = QtWidgets.QLineEdit(self.page_cleck)
+        self.lineEdit_num_2.setGeometry(QtCore.QRect(200, 330, 221, 31))
+        self.lineEdit_num_2.setObjectName("lineEdit_num_2")
+        self.pushButton_4 = QtWidgets.QPushButton(self.page_cleck)
+        self.pushButton_4.setGeometry(QtCore.QRect(260, 400, 93, 28))
+        self.pushButton_4.setObjectName("pushButton_4")
+        self.label_55 = QtWidgets.QLabel(self.page_cleck)
+        self.label_55.setGeometry(QtCore.QRect(0, 0, 111, 41))
+        self.label_55.setStyleSheet("font: 16pt \"Algerian\";\n"
+"color: rgb(116, 27, 124);\n"
+"background-color: rgb(255, 255, 255);")
+        self.label_55.setObjectName("label_55")
+        self.stackedWidget.addWidget(self.page_cleck)
         self.horizontalLayout_5.addWidget(self.stackedWidget)
         self.horizontalLayout_4.addWidget(self.frame_8)
         self.verticalLayout.addWidget(self.frame_3)
@@ -459,6 +482,7 @@ class Ui_FinanceWindow(object):
         self.pushButton_Find.setText(_translate("FinanceWindow", "查看所有\n"
 "员工薪资"))
         self.pushButton_Change.setText(_translate("FinanceWindow", "修改他人薪资"))
+        self.pushButton_Check.setText(_translate("FinanceWindow", "审批报表"))
         self.label_7.setText(_translate("FinanceWindow", "个人信息"))
         self.label_13.setText(_translate("FinanceWindow", "姓名"))
         self.label_14.setText(_translate("FinanceWindow", "TextLabel"))
@@ -494,4 +518,7 @@ class Ui_FinanceWindow(object):
         self.pushButton_change_money_sure.setText(_translate("FinanceWindow", "确定"))
         self.label_5.setText(_translate("FinanceWindow", "修改成功！"))
         self.label_54.setText(_translate("FinanceWindow", "工号不正确！"))
+        self.lineEdit_num_2.setPlaceholderText(_translate("FinanceWindow", "请输入需要审批的项目号："))
+        self.pushButton_4.setText(_translate("FinanceWindow", "确定"))
+        self.label_55.setText(_translate("FinanceWindow", "审批报表"))
 import res_rc

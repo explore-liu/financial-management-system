@@ -1,3 +1,3 @@
-将financial_management.sql配置到本地数据库，修改连接
+方法一：运行dist/main.exe
 
-运行main.py
+方法二：运行main.py

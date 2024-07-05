@@ -1,6 +1,6 @@
 import pandas as pd
 import pymysql
-
+import hashlib
 
 class Instructions:
     def __init__(self, db):
@@ -87,6 +87,8 @@ class Instructions:
             # print('密码不相符。')
             return 4
 
+        user_password = self.encrypt(user_password)  # 加密
+
         attribute = '(%s, %s, %s, %s, %s)' % (data[3], data[4], data[5], data[6], data[1])
         values = (user_name, user_password, user_email, user_phone, staff_no)
         sql = 'INSERT INTO %s %s VALUES %s' % (data[2], attribute, values)
@@ -101,18 +103,23 @@ class Instructions:
         if not self.table_list:
             return role_no, s_no
 
+        password = self.encrypt(password)  # 加密
+
         data = ['r_no', 's_no', 'user', 'u_name', 'u_password']
         sql = 'select %s, %s from %s where %s=\'%s\' and %s=\'%s\'' % (
             data[0], data[1], data[2], data[3], user_name, data[4], password)
         result = self.query(sql)
-        if not result:
-            print('用户名或密码错误。')
-        else:
+        if result:
             for i, row in enumerate(result):
                 role_no = row[0]
                 s_no = row[1]
 
         return role_no, s_no
+
+    # 加密
+    def encrypt(self, password):
+        sha_signature = hashlib.sha256(password.encode()).hexdigest()
+        return sha_signature
 
     # 查看视图
     def show_view(self, view_name, info=None):
@@ -157,7 +164,8 @@ class Instructions:
         return information
 
     def password_change(self, sno, password):
-        sql = 'update user set u_password = %s where s_no = %s' % (password, sno)
+        password = self.encrypt(password)  # 加密
+        sql = 'update user set u_password = \'%s\' where s_no = %s' % (password, sno)
         self.execute(sql)
         print("修改成功")
 

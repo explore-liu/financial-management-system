@@ -28,7 +28,9 @@ class Admin(Instructions):
             return 0
 
         defult_password = '123456'
-        reset_sql = 'UPDATE %s SET %s=%s WHERE %s LIKE \'%s\'' % (data[1], data[2], defult_password, data[0], s_no)
+        defult_password = self.encrypt(defult_password)  # 加密
+
+        reset_sql = 'UPDATE %s SET %s=\'%s\' WHERE %s LIKE \'%s\'' % (data[1], data[2], defult_password, data[0], s_no)
         # info = '重置完毕。'
         self.execute(reset_sql)
         return 1

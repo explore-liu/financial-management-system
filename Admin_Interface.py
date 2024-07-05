@@ -126,11 +126,11 @@ class Ui_AdminWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frame_7.sizePolicy().hasHeightForWidth())
         self.frame_7.setSizePolicy(sizePolicy)
-        self.frame_7.setStyleSheet("background-color: rgb(0, 85, 255);\n"
-";\n"
-"border-bottom-left-radius:30px\n"
+        self.frame_7.setStyleSheet("background-color: rgb(140,140, 140);\n"
 "\n"
-"    ")
+"border-bottom-left-radius:30px;\n"
+"\n"
+"")
         self.frame_7.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_7.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_7.setObjectName("frame_7")
@@ -192,9 +192,9 @@ class Ui_AdminWindow(object):
         self.label_7 = QtWidgets.QLabel(self.page_new)
         self.label_7.setGeometry(QtCore.QRect(0, 0, 161, 41))
         self.label_7.setStyleSheet("\n"
-"font: 15pt \"Algerian\";\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(0, 85, 255);")
+"font: 16pt \"Algerian\";\n"
+"color: rgb(116, 27, 124);\n"
+"background-color: rgb(255, 255, 255);")
         self.label_7.setObjectName("label_7")
         self.lineEdit_2 = QtWidgets.QLineEdit(self.page_new)
         self.lineEdit_2.setGeometry(QtCore.QRect(190, 60, 231, 31))
@@ -254,9 +254,9 @@ class Ui_AdminWindow(object):
         self.label_6 = QtWidgets.QLabel(self.page_delete)
         self.label_6.setGeometry(QtCore.QRect(0, 0, 111, 41))
         self.label_6.setStyleSheet("\n"
-"font: 15pt \"Algerian\";\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(0, 85, 255);")
+"font: 16pt \"Algerian\";\n"
+"color: rgb(116, 27, 124);\n"
+"background-color: rgb(255, 255, 255);")
         self.label_6.setObjectName("label_6")
         self.lineEdit = QtWidgets.QLineEdit(self.page_delete)
         self.lineEdit.setGeometry(QtCore.QRect(170, 60, 261, 31))
@@ -306,9 +306,9 @@ class Ui_AdminWindow(object):
         self.label_8 = QtWidgets.QLabel(self.page_edit)
         self.label_8.setGeometry(QtCore.QRect(0, 0, 111, 41))
         self.label_8.setStyleSheet("\n"
-"font: 15pt \"Algerian\";\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(0, 85, 255);")
+"font: 16pt \"Algerian\";\n"
+"color: rgb(116, 27, 124);\n"
+"background-color: rgb(255, 255, 255);")
         self.label_8.setObjectName("label_8")
         self.frame_9 = QtWidgets.QFrame(self.page_edit)
         self.frame_9.setGeometry(QtCore.QRect(0, 479, 641, 40))

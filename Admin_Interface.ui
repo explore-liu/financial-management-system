@@ -267,11 +267,11 @@ QPushButton:hover{
            </sizepolicy>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(0, 85, 255);
-;
-border-bottom-left-radius:30px
+           <string notr="true">background-color: rgb(140,140, 140);
 
-    </string>
+border-bottom-left-radius:30px;
+
+</string>
           </property>
           <property name="frameShape">
            <enum>QFrame::StyledPanel</enum>
@@ -398,9 +398,9 @@ pressed{
                </property>
                <property name="styleSheet">
                 <string notr="true">
-font: 15pt &quot;Algerian&quot;;
-color: rgb(255, 255, 255);
-background-color: rgb(0, 85, 255);</string>
+font: 16pt &quot;Algerian&quot;;
+color: rgb(116, 27, 124);
+background-color: rgb(255, 255, 255);</string>
                </property>
                <property name="text">
                 <string>更改用户身份</string>
@@ -568,9 +568,9 @@ color: rgb(255, 0, 0);</string>
                </property>
                <property name="styleSheet">
                 <string notr="true">
-font: 15pt &quot;Algerian&quot;;
-color: rgb(255, 255, 255);
-background-color: rgb(0, 85, 255);</string>
+font: 16pt &quot;Algerian&quot;;
+color: rgb(116, 27, 124);
+background-color: rgb(255, 255, 255);</string>
                </property>
                <property name="text">
                 <string>注销账户</string>
@@ -706,9 +706,9 @@ color: rgb(255, 0, 0);</string>
                </property>
                <property name="styleSheet">
                 <string notr="true">
-font: 15pt &quot;Algerian&quot;;
-color: rgb(255, 255, 255);
-background-color: rgb(0, 85, 255);</string>
+font: 16pt &quot;Algerian&quot;;
+color: rgb(116, 27, 124);
+background-color: rgb(255, 255, 255);</string>
                </property>
                <property name="text">
                 <string>重置密码</string>

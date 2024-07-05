@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1020</width>
-    <height>695</height>
+    <height>707</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -267,11 +267,9 @@ QPushButton:hover{
            </sizepolicy>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(0, 85, 255);
-;
-border-bottom-left-radius:30px
+           <string notr="true">background-color: rgb(140,140, 140);
 
-    </string>
+border-bottom-left-radius:30px;</string>
           </property>
           <property name="frameShape">
            <enum>QFrame::StyledPanel</enum>
@@ -380,6 +378,22 @@ pressed{
              </property>
             </widget>
            </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_Check">
+             <property name="styleSheet">
+              <string notr="true">font: 18pt &quot;Algerian&quot;;
+color: rgb(255, 255, 255);
+pressed{
+	padding-left:5px;
+	padding-top:5px;
+}
+</string>
+             </property>
+             <property name="text">
+              <string>审批报表</string>
+             </property>
+            </widget>
+           </item>
           </layout>
          </widget>
         </item>
@@ -432,10 +446,9 @@ pressed{
                 </rect>
                </property>
                <property name="styleSheet">
-                <string notr="true">
-font: 15pt &quot;Algerian&quot;;
-color: rgb(255, 255, 255);
-background-color: rgb(0, 85, 255);</string>
+                <string notr="true">font: 16pt &quot;Algerian&quot;;
+color: rgb(116, 27, 124);
+background-color: rgb(255, 255, 255);</string>
                </property>
                <property name="text">
                 <string>个人信息</string>
@@ -653,10 +666,9 @@ font: 18pt &quot;Algerian&quot;;</string>
                 </rect>
                </property>
                <property name="styleSheet">
-                <string notr="true">
-font: 15pt &quot;Algerian&quot;;
-color: rgb(255, 255, 255);
-background-color: rgb(0, 85, 255);</string>
+                <string notr="true">font: 16pt &quot;Algerian&quot;;
+color: rgb(116, 27, 124);
+background-color: rgb(255, 255, 255);</string>
                </property>
                <property name="text">
                 <string>个人薪资情况</string>
@@ -806,10 +818,9 @@ font: 18pt &quot;Algerian&quot;;</string>
                 </rect>
                </property>
                <property name="styleSheet">
-                <string notr="true">
-font: 15pt &quot;Algerian&quot;;
-color: rgb(255, 255, 255);
-background-color: rgb(0, 85, 255);</string>
+                <string notr="true">font: 16pt &quot;Algerian&quot;;
+color: rgb(116, 27, 124);
+background-color: rgb(255, 255, 255);</string>
                </property>
                <property name="text">
                 <string>修改密码</string>
@@ -967,10 +978,9 @@ color: rgb(255, 0, 0);</string>
                 </rect>
                </property>
                <property name="styleSheet">
-                <string notr="true">
-font: 15pt &quot;Algerian&quot;;
-color: rgb(255, 255, 255);
-background-color: rgb(0, 85, 255);</string>
+                <string notr="true">font: 16pt &quot;Algerian&quot;;
+color: rgb(116, 27, 124);
+background-color: rgb(255, 255, 255);</string>
                </property>
                <property name="text">
                 <string>所有员工薪资</string>
@@ -988,10 +998,9 @@ background-color: rgb(0, 85, 255);</string>
                 </rect>
                </property>
                <property name="styleSheet">
-                <string notr="true">
-font: 15pt &quot;Algerian&quot;;
-color: rgb(255, 255, 255);
-background-color: rgb(0, 85, 255);</string>
+                <string notr="true">font: 16pt &quot;Algerian&quot;;
+color: rgb(116, 27, 124);
+background-color: rgb(255, 255, 255);</string>
                </property>
                <property name="text">
                 <string>修改薪资</string>
@@ -1103,6 +1112,62 @@ color: rgb(255, 0, 0);</string>
                  </widget>
                 </widget>
                </widget>
+              </widget>
+             </widget>
+             <widget class="QWidget" name="page_cleck">
+              <widget class="QTableWidget" name="tableWidget_2">
+               <property name="geometry">
+                <rect>
+                 <x>130</x>
+                 <y>60</y>
+                 <width>371</width>
+                 <height>241</height>
+                </rect>
+               </property>
+              </widget>
+              <widget class="QLineEdit" name="lineEdit_num_2">
+               <property name="geometry">
+                <rect>
+                 <x>200</x>
+                 <y>330</y>
+                 <width>221</width>
+                 <height>31</height>
+                </rect>
+               </property>
+               <property name="placeholderText">
+                <string>请输入需要审批的项目号：</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="pushButton_4">
+               <property name="geometry">
+                <rect>
+                 <x>260</x>
+                 <y>400</y>
+                 <width>93</width>
+                 <height>28</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>确定</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="label_55">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>111</width>
+                 <height>41</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 16pt &quot;Algerian&quot;;
+color: rgb(116, 27, 124);
+background-color: rgb(255, 255, 255);</string>
+               </property>
+               <property name="text">
+                <string>审批报表</string>
+               </property>
               </widget>
              </widget>
             </widget>

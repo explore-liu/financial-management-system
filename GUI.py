@@ -24,7 +24,6 @@ class LoginWindow(QMainWindow):  ##加载界面
         self.shadow.setBlurRadius(15)
         self.shadow.setColor(QtCore.Qt.black)
         self.ui.frame.setGraphicsEffect(self.shadow)
-        self.ui.pushButton_Login.clicked.connect(lambda: self.ui.stackedWidget_2.setCurrentIndex(0))
         self.ui.pushButton_Register.clicked.connect(self.signup)
         self.ui.pushButton_L_sure.clicked.connect(self.signin)
         self.show()
@@ -63,6 +62,7 @@ class RegisterWindow(QMainWindow):  # 注册界面
         self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         self.ui.pushButton_R.clicked.connect(self.signup)
+        self.ui.pushButton_L.clicked.connect(self.login)
         self.show()
 
     # 注册
@@ -80,13 +80,17 @@ class RegisterWindow(QMainWindow):  # 注册界面
             if not user_name:
                 self.ui.stackedWidget.setCurrentIndex(4)  # 用户名不能为空
             if flag == 2:
-                pass  # 该用户已存在，请直接登录。
+                self.ui.stackedWidget.setCurrentIndex(5) # 该用户已存在，请直接登录。
             elif flag == 3:
-                pass  # 用户名已存在
+                self.ui.stackedWidget.setCurrentIndex(6)  # 用户名已存在
             elif flag == 4:
                 self.ui.stackedWidget.setCurrentIndex(3)  # 密码不相符
             elif flag == 0:
                 self.ui.stackedWidget.setCurrentIndex(1)  # 注册成功
+
+    def login(self):
+        self.win =LoginWindow(self.ins)
+        self.close()
 
 
 class UserWindow(QMainWindow):  ##普通用户界面
@@ -115,6 +119,8 @@ class UserWindow(QMainWindow):  ##普通用户界面
         self.ui.pushButton_Seach.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(1))
         self.ui.pushButton_My.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(0))
         self.ui.pushButton_Edit.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(2))  ##要进行处理
+        self.ui.pushButton_Table.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(3))
+        self.ui.pushButton_4.clicked.connect(self.submit_statement)
         self.ui.pushButton_change_sure.clicked.connect(self.change)
         self.show()
 
@@ -129,6 +135,19 @@ class UserWindow(QMainWindow):  ##普通用户界面
             self.em.password_change(self.s_no, change_password)
         else:
             self.ui.stackedWidget_2.setCurrentIndex(2)
+
+    # 提交报表
+    def submit_statement(self):
+        # 需要在这里加入提交报表的窗口
+        ##self.ui.stackedWidget.setCurrentIndex(3)
+        # 需要：“请输入文件名”
+        file_path = self.ui.lineEdit_file.text()  # 这里应接收用户输入
+        flag = self.em.submit_statement(self.s_no, file_path)
+        if flag == -1:
+            self.ui.stackedWidget_3.setCurrentIndex(1)  # 这里需要弹窗 文件名不存在
+        elif flag == 0:
+            self.ui.stackedWidget_3.setCurrentIndex(2)  # 这里需要弹窗 表为空
+
 
 
 class FinanceWindow(QMainWindow):  ##财务管理界面
@@ -157,17 +176,26 @@ class FinanceWindow(QMainWindow):  ##财务管理界面
         self.table1 = self.ui.tableWidget
 
         # 假设这是数据库中的后端数据，一个表格
-        backend_data = self.fin.get_staff_scale_view()
+        backend_data = self.fin.get_staff_scale_view()##
         # 通过后端数据填充
         self.fill_table_with_data(backend_data)
+
+        self.table2 = self.ui.tableWidget_2##审批报表的表格
+        # 假设这是数据库中的后端数据，一个表格
+        backend_data = self.fin.view_statement()
+        # 通过后端数据填充
+        self.fill_table_with_data_2(backend_data)
 
         self.ui.pushButton_Seach.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(1))
         self.ui.pushButton_My.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(0))
         self.ui.pushButton_Edit.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(2))
         self.ui.pushButton_Find.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(3))
         self.ui.pushButton_Change.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(4))
+        self.ui.pushButton_Check.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(5))
         self.ui.pushButton_change_sure.clicked.connect(self.change)
         self.ui.pushButton_change_money_sure.clicked.connect(self.change_money)
+        self.ui.pushButton_4.clicked.connect(self.delete_statement)
+
         self.show()
 
     def change(self):
@@ -202,6 +230,44 @@ class FinanceWindow(QMainWindow):  ##财务管理界面
                 # 创建一个 QTableWidgetItem 并设置到表格的对应位置
                 item = QtWidgets.QTableWidgetItem(value)
                 self.table1.setItem(row, column, item)
+
+    # 审批报表
+    def delete_statement(self):
+        ##result = self.fin.view_statement()
+        # 需要显示出表格
+        # 需要：“请输入要审批的项目号”
+        st_no = self.ui.lineEdit_num_2.text()  # 这里需读入项目号
+        self.fin.delete_statement(st_no)
+
+        ##result = self.fin.view_statement()
+        self.table3 = self.ui.tableWidget_2
+        # 假设这是数据库中的后端数据，一个表格
+        backend_data = self.fin.view_statement()
+        # 通过后端数据填充
+        self.fill_table_with_data_3(backend_data)
+        # 需要显示出表格
+
+    def fill_table_with_data_2(self, data):
+        # 设置表格的行数和列数
+        self.table2.setRowCount(len(data))
+        self.table2.setColumnCount(len(data[0]))
+        # 填充数据到表格中
+        for row, row_data in enumerate(data):
+            for column, value in enumerate(row_data):
+                # 创建一个 QTableWidgetItem 并设置到表格的对应位置
+                item = QtWidgets.QTableWidgetItem(value)
+                self.table2.setItem(row, column, item)
+
+    def fill_table_with_data_3(self, data):
+        # 设置表格的行数和列数
+        self.table3.setRowCount(len(data))
+        self.table3.setColumnCount(len(data[0]))
+        # 填充数据到表格中
+        for row, row_data in enumerate(data):
+            for column, value in enumerate(row_data):
+                # 创建一个 QTableWidgetItem 并设置到表格的对应位置
+                item = QtWidgets.QTableWidgetItem(value)
+                self.table3.setItem(row, column, item)
 
 
 class AdminWindow(QMainWindow):

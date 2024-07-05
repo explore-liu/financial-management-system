@@ -114,7 +114,7 @@ class Ui_RegisterWindow(object):
         self.lineEdit_6.setStyleSheet("color: rgb(255, 255, 255);")
         self.lineEdit_6.setObjectName("lineEdit_6")
         self.pushButton_R = QtWidgets.QPushButton(self.frame_3)
-        self.pushButton_R.setGeometry(QtCore.QRect(140, 370, 93, 28))
+        self.pushButton_R.setGeometry(QtCore.QRect(210, 370, 93, 28))
         self.pushButton_R.setStyleSheet("color: rgb(255, 255, 255);")
         self.pushButton_R.setObjectName("pushButton_R")
         self.frame_6 = QtWidgets.QFrame(self.frame_3)
@@ -161,10 +161,31 @@ class Ui_RegisterWindow(object):
 "font: 12pt \"Algerian\";")
         self.label_5.setObjectName("label_5")
         self.stackedWidget.addWidget(self.page_5)
+        self.page_6 = QtWidgets.QWidget()
+        self.page_6.setObjectName("page_6")
+        self.label_6 = QtWidgets.QLabel(self.page_6)
+        self.label_6.setGeometry(QtCore.QRect(70, 10, 251, 21))
+        self.label_6.setStyleSheet("color: rgb(255, 0, 0);\n"
+"font: 12pt \"Algerian\";")
+        self.label_6.setObjectName("label_6")
+        self.stackedWidget.addWidget(self.page_6)
+        self.page_7 = QtWidgets.QWidget()
+        self.page_7.setObjectName("page_7")
+        self.label_7 = QtWidgets.QLabel(self.page_7)
+        self.label_7.setGeometry(QtCore.QRect(130, 10, 121, 21))
+        self.label_7.setStyleSheet("color: rgb(255, 0, 0);\n"
+"font: 12pt \"Algerian\";")
+        self.label_7.setObjectName("label_7")
+        self.stackedWidget.addWidget(self.page_7)
+        self.pushButton_L = QtWidgets.QPushButton(self.frame_3)
+        self.pushButton_L.setGeometry(QtCore.QRect(90, 370, 93, 28))
+        self.pushButton_L.setStyleSheet("color: rgb(255, 255, 255);")
+        self.pushButton_L.setObjectName("pushButton_L")
         self.verticalLayout.addWidget(self.frame_3)
         RegisterWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(RegisterWindow)
+        self.stackedWidget.setCurrentIndex(0)
         self.pushButton.clicked.connect(RegisterWindow.close) # type: ignore
         self.pushButton_2.clicked.connect(RegisterWindow.hide) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(RegisterWindow)
@@ -184,4 +205,7 @@ class Ui_RegisterWindow(object):
         self.label_3.setText(_translate("RegisterWindow", "工号不存在！"))
         self.label_4.setText(_translate("RegisterWindow", "两次密码不一致！"))
         self.label_5.setText(_translate("RegisterWindow", "用户名不能为空！"))
+        self.label_6.setText(_translate("RegisterWindow", "该用户已存在，请直接登录"))
+        self.label_7.setText(_translate("RegisterWindow", "用户名已存在"))
+        self.pushButton_L.setText(_translate("RegisterWindow", "登录"))
 import res_rc

@@ -159,9 +159,6 @@ class Ui_LoginWindow(object):
         self.frame_7.setObjectName("frame_7")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.frame_7)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.pushButton_Login = QtWidgets.QPushButton(self.frame_7)
-        self.pushButton_Login.setObjectName("pushButton_Login")
-        self.horizontalLayout_2.addWidget(self.pushButton_Login)
         self.pushButton_Register = QtWidgets.QPushButton(self.frame_7)
         self.pushButton_Register.setObjectName("pushButton_Register")
         self.horizontalLayout_2.addWidget(self.pushButton_Register)
@@ -233,7 +230,6 @@ class Ui_LoginWindow(object):
         self.lineEdit_R_password1.setPlaceholderText(_translate("LoginWindow", "密码："))
         self.lineEdit_R_password2.setPlaceholderText(_translate("LoginWindow", "确认密码："))
         self.pushButton_R_sure.setText(_translate("LoginWindow", "注册"))
-        self.pushButton_Login.setText(_translate("LoginWindow", "登录"))
         self.pushButton_Register.setText(_translate("LoginWindow", "注册"))
         self.label_2.setText(_translate("LoginWindow", "账号或密码错误！"))
         self.label.setText(_translate("LoginWindow", "欢迎来到\n"
